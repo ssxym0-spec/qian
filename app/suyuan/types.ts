@@ -138,6 +138,7 @@ export interface BatchListItem {
   _id: string;
   batch_number: string;
   category_name: string; // 后端返回的是 category_name
+  category?: string; // 品类字段（可选，用于兼容不同的后端返回格式）
   grade?: string; // 成品等级（旧字段，兼容性保留）
   grade_id?: Grade; // 成品等级对象（新字段）
   title?: string;

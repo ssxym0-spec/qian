@@ -242,6 +242,8 @@ function adaptBatchItem(raw: any, index: number): BatchListItem {
     _id: String(id),
     batch_number: String(batchNumberSource),
     category_name: String(categoryName),
+    // 保留 category 字段（如果原始数据中有），用于兼容不同的后端返回格式
+    ...(raw.category ? { category: String(raw.category) } : {}),
     grade,
     grade_id,
     title: raw.title || raw.detail_title || '',
