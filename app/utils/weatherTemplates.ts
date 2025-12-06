@@ -2,6 +2,7 @@
  * 天气模板工具函数
  * 用于从后端加载天气图标映射表
  */
+import { getApiUrl } from './apiConfig';
 
 interface WeatherTemplate {
   _id: string;
@@ -56,7 +57,7 @@ export async function loadWeatherTemplates(): Promise<void> {
   loadPromise = (async () => {
     try {
       console.log('🔄 [WeatherTemplates] 开始加载天气模板...');
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000'}/api/public/weather-templates`, {
+      const response = await fetch(getApiUrl('/api/public/weather-templates'), {
         cache: 'no-store', // 不缓存，每次都获取最新数据
       });
       

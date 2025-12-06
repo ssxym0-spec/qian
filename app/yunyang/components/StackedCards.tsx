@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { getApiBaseUrl } from '../../utils/apiConfig';
 
 interface Card {
   id: string;
@@ -35,7 +36,7 @@ export default function StackedCards({ cards }: StackedCardsProps) {
       return trimmed;
     }
     if (trimmed.startsWith('/')) {
-      return `${process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000'}${trimmed}`;
+      return `${getApiBaseUrl()}${trimmed}`;
     }
     return trimmed;
   };
