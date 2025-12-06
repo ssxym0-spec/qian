@@ -1,0 +1,242 @@
+{
+  "场景数据格式说明": "本文件展示了场景化应用轮播组件支持的各种数据格式",
+  
+  "完整格式示例": [
+    {
+      "id": "gift-scenario",
+      "title": "私房好礼",
+      "icon": "🎁",
+      "pain_point": "礼物千篇一律？转身即忘",
+      "solution": "送的不是茶，而是一个完整的故事体系：以你的姓氏命名专属地块，配上独有的定制包装，再附上一个扫码即可进入的、讲述完整生长故事的专属"数字领地"。",
+      "background_image": "/images/scenarios/gift-scenario.jpg",
+      "core_values": [
+        {
+          "icon": "✨",
+          "title": "有面子，显品味",
+          "description": "专属茶园认养，彰显独特品味与心意"
+        },
+        {
+          "icon": "💝",
+          "title": "绝对走心，独一份",
+          "description": "每份礼物都有独一无二的故事和专属编号"
+        },
+        {
+          "icon": "📝",
+          "title": "记忆点长久，"看得见"的心意",
+          "description": "通过数字领地，让心意持续传递一整年"
+        }
+      ]
+    },
+    {
+      "id": "wellness-scenario",
+      "title": "养生新宠",
+      "icon": "🍵",
+      "pain_point": "市面茶叶品质参差不齐，真假难辨",
+      "solution": "认养一片专属茶园，从源头把控品质。每季收获的茶叶都经过严格检测，全程透明可追溯，让您喝得放心、安心。",
+      "background_image": "/images/scenarios/wellness-scenario.jpg",
+      "core_values": [
+        {
+          "icon": "🌱",
+          "title": "源头品质把控",
+          "description": "从茶树种植到采摘，全程可视化监控"
+        },
+        {
+          "icon": "🔬",
+          "title": "严格质量检测",
+          "description": "每批茶叶都经过专业实验室检测认证"
+        },
+        {
+          "icon": "📱",
+          "title": "全程透明可追溯",
+          "description": "扫码即可查看茶叶生长全过程"
+        }
+      ]
+    },
+    {
+      "id": "investment-scenario",
+      "title": "理财新选择",
+      "icon": "💰",
+      "pain_point": "传统理财收益低，风险高",
+      "solution": "茶园认养是一种新型的实物资产投资方式。认养期内，您不仅能获得高品质茶叶，还能参与茶园增值收益分红。",
+      "background_image": "/images/scenarios/investment-scenario.jpg",
+      "core_values": [
+        {
+          "icon": "📈",
+          "title": "稳健增值",
+          "description": "茶叶价值逐年上涨，保值增值双重保障"
+        },
+        {
+          "icon": "🎁",
+          "title": "实物回报",
+          "description": "每季获得高品质茶叶，价值看得见"
+        },
+        {
+          "icon": "🤝",
+          "title": "分红机制",
+          "description": "参与茶园经营分红，共享发展红利"
+        }
+      ]
+    }
+  ],
+
+  "最小化格式示例": [
+    {
+      "id": "simple-scenario-1",
+      "title": "商务礼品",
+      "pain_point": "企业送礼缺乏新意",
+      "solution": "定制专属茶园礼品，让客户印象深刻",
+      "core_values": [
+        { "icon": "💎", "title": "高端定制" },
+        { "icon": "🎯", "title": "独特心意" },
+        { "icon": "🌱", "title": "健康环保" }
+      ]
+    },
+    {
+      "id": "simple-scenario-2",
+      "title": "亲子教育",
+      "pain_point": "孩子缺少自然体验",
+      "solution": "通过茶园认养，让孩子了解茶文化",
+      "core_values": [
+        { "icon": "🌱", "title": "自然教育" },
+        { "icon": "👪", "title": "亲子互动" },
+        { "icon": "📚", "title": "文化传承" }
+      ]
+    }
+  ],
+
+  "兼容旧格式示例（纯文本content字段）": [
+    {
+      "id": "legacy-scenario-1",
+      "title": "节日礼赠",
+      "content": "痛点：企业节日送礼千篇一律，客户收到就忘记\n方案：通过定制专属茶园认养礼盒，让每位客户拥有专属茶园编号，四季配送新鲜茶叶\n价值：体面有心意，客户记忆深刻\n价值：全年持续互动，提升复购率\n价值：绿色环保，彰显企业社会责任"
+    },
+    {
+      "id": "legacy-scenario-2",
+      "title": "客户答谢",
+      "content": "困扰：答谢客户难以表达真诚\n解决方案：认养专属茶园，以客户名字命名，每季寄送新鲜茶叶\n效果：让客户感受到持续关怀\n效果：建立长期情感连接\n效果：提升客户忠诚度"
+    }
+  ],
+
+  "组件使用示例（TypeScript）": `
+import ScenarioCarousel from '@/app/yunyang/components/ScenarioCarousel';
+
+export default function MyPage() {
+  const scenarios = [
+    {
+      id: 'gift',
+      title: '私房好礼',
+      pain_point: '礼物千篇一律？转身即忘',
+      solution: '送的不是茶，而是一个完整的故事体系...',
+      core_values: [
+        { icon: '✨', title: '有面子，显品味' },
+        { icon: '💝', title: '绝对走心，独一份' },
+        { icon: '📝', title: '记忆点长久' },
+      ]
+    },
+    // 更多场景...
+  ];
+
+  return (
+    <div className="container mx-auto py-12">
+      <h2 className="text-3xl font-bold text-center mb-8">
+        场景化应用探索
+      </h2>
+      
+      {/* 默认7秒自动播放 */}
+      <ScenarioCarousel scenarios={scenarios} />
+      
+      {/* 自定义10秒自动播放 */}
+      <ScenarioCarousel 
+        scenarios={scenarios} 
+        autoPlayInterval={10000}
+      />
+    </div>
+  );
+}
+  `,
+
+  "API响应格式示例": {
+    "success": true,
+    "data": {
+      "private": {
+        "id": "private-plan",
+        "name": "私人定制",
+        "scenario_applications": [
+          {
+            "id": "gift-scenario",
+            "title": "私房好礼",
+            "icon": "🎁",
+            "pain_point": "礼物千篇一律？转身即忘",
+            "solution": "送的不是茶，而是一个完整的故事体系...",
+            "core_values": [
+              { "icon": "✨", "title": "有面子，显品味" },
+              { "icon": "💝", "title": "绝对走心，独一份" }
+            ]
+          }
+        ]
+      },
+      "enterprise": {
+        "id": "enterprise-plan",
+        "name": "企业领养",
+        "use_scenarios": [
+          {
+            "id": "corp-gift",
+            "title": "企业礼赠",
+            "icon": "🎁",
+            "pain_point": "商务礼品缺乏新意",
+            "solution": "定制专属茶园，彰显企业文化",
+            "core_values": [
+              { "icon": "💎", "title": "高端品质" }
+            ]
+          }
+        ]
+      }
+    }
+  },
+
+  "字段说明": {
+    "必填字段": {
+      "id": "场景唯一标识，字符串类型",
+      "title": "场景标题，将以橙黄色大字显示"
+    },
+    "可选字段": {
+      "icon": "场景图标（Emoji），如果不提供会自动匹配",
+      "pain_point": "痛点描述，将以红色文字显示",
+      "solution": "解决方案，将在白色背景区域显示",
+      "background_image": "背景图片URL，显示在右上角，如果不提供会显示橙黄色渐变背景",
+      "core_values": "核心价值数组，每项显示为带勾选标记的列表项",
+      "content": "兼容旧格式的纯文本内容，会自动解析成结构化数据"
+    },
+    "core_values数组格式": {
+      "icon": "价值图标（Emoji），如果不提供会使用默认图标",
+      "title": "价值标题（必填）",
+      "description": "价值描述（可选，当前版本不显示）"
+    }
+  },
+
+  "常见Emoji图标推荐": {
+    "礼品相关": ["🎁", "🎀", "💝", "🎉", "🎊"],
+    "商务相关": ["💼", "🤝", "💎", "📊", "🎯"],
+    "健康养生": ["🍵", "🌱", "💚", "🧘", "❤️"],
+    "教育文化": ["📚", "🎓", "👨‍👩‍👧‍👦", "🌟", "✨"],
+    "环保绿色": ["🌱", "🌿", "🍃", "♻️", "🌍"],
+    "品质保证": ["✅", "⭐", "💯", "🏆", "👍"],
+    "创新科技": ["💡", "🚀", "🔬", "📱", "⚡"]
+  },
+
+  "数据验证规则": {
+    "id": "必填，唯一标识，建议使用kebab-case格式",
+    "title": "必填，长度建议2-8个字",
+    "pain_point": "可选，建议长度10-30个字",
+    "solution": "可选，建议长度20-100个字",
+    "core_values": "可选，建议2-5项，每项标题建议6-12个字"
+  },
+
+  "性能建议": {
+    "场景数量": "建议3-7个场景，过多会影响加载速度",
+    "图片大小": "建议每张图片小于200KB",
+    "图片尺寸": "建议400×400px的正方形图片",
+    "图片格式": "推荐使用WebP或JPEG格式"
+  }
+}
+

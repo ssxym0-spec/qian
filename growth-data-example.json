@@ -1,0 +1,112 @@
+{
+  "daily_logs": [
+    {
+      "date": "2024-09-05",
+      "plot_name": "A区东坡",
+      "recorder": "张师傅",
+      "weather": "晴",
+      "temperature_range": "18~26°C",
+      "summary": "茶树生长态势良好，新芽萌发整齐，叶色浓绿。今日进行了适量灌溉，确保茶树水分充足。",
+      "full_description": "今日天气晴朗，光照充足，茶树生长态势良好。观察到新芽萌发整齐，叶色浓绿，叶片舒展。由于近期降雨较少，土壤略显干燥，上午进行了适量灌溉，确保茶树水分充足。下午巡查时发现个别茶树有轻微黄化现象，初步判断为缺氮，已做好标记，明日将进行针对性施肥。整体来看，本月茶树生长状况理想，预计下月初可进行第一轮采摘。",
+      "images": [
+        "https://images.unsplash.com/photo-1563788835932-4a8ec6c615c1?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1582793988951-9aed5509eb97?w=800&h=600&fit=crop"
+      ],
+      "sunlight_hours": 8.5,
+      "rainfall": 0,
+      "avg_temperature": 22,
+      "humidity": 65,
+      "farm_activities": "灌溉：上午10点对A区东坡进行灌溉，灌溉量约500L/亩",
+      "phenological_observation": "新芽萌发整齐，一芽二叶占比约60%，生长速度正常",
+      "is_abnormal": false,
+      "abnormal_description": null,
+      "abnormal_solution": null
+    },
+    {
+      "date": "2024-09-10",
+      "plot_name": "B区南坡",
+      "recorder": "李师傅",
+      "weather": "多云",
+      "temperature_range": "17~23°C",
+      "summary": "发现部分茶树叶片出现褐色斑点，疑似茶饼病。已采取防治措施，喷施波尔多液进行预防。",
+      "full_description": "上午巡查时发现B区南坡部分茶树叶片出现褐色斑点，边缘有黄色晕圈，疑似茶饼病初期症状。立即采集病叶样本进行观察确认，并统计受害面积约占该区域的15%。下午组织人员对受害茶树及周边茶树喷施1:1:100的波尔多液进行预防和治疗，同时加强通风，降低湿度。已将病叶集中清理并进行无害化处理，防止病菌扩散。后续将密切观察病情发展，必要时进行二次防治。",
+      "images": [
+        "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=800&h=600&fit=crop"
+      ],
+      "sunlight_hours": 5.5,
+      "rainfall": 2.5,
+      "avg_temperature": 20,
+      "humidity": 78,
+      "farm_activities": null,
+      "phenological_observation": "部分茶树出现病害症状，其余茶树生长正常",
+      "is_abnormal": true,
+      "abnormal_description": "B区南坡约15%的茶树叶片出现褐色斑点，疑似茶饼病。病斑直径约2-5mm，边缘有黄色晕圈。",
+      "abnormal_solution": "1. 立即喷施1:1:100波尔多液进行预防和治疗；2. 清理病叶并无害化处理；3. 加强通风，降低湿度；4. 连续观察7天，必要时进行二次防治。"
+    },
+    {
+      "date": "2024-09-15",
+      "plot_name": "A区东坡",
+      "recorder": "张师傅",
+      "weather": "晴",
+      "temperature_range": "19~25°C",
+      "summary": "今日进行秋季第一轮施肥，施用有机复合肥，补充茶树生长所需养分。",
+      "full_description": "根据茶树生长状况和土壤检测结果，今日对A区东坡进行秋季第一轮施肥。选用优质有机复合肥（N-P-K比例为15-10-15），采用沟施法，在茶树根系周围开深15cm、宽20cm的施肥沟，施肥量约30kg/亩，施肥后及时覆土并浇水，促进肥料溶解吸收。本次施肥旨在补充茶树生长所需的氮、磷、钾等营养元素，增强树势，为秋茶生产和越冬做好准备。预计15天后可见效果，届时将再次观察茶树生长状况。",
+      "images": [
+        "https://images.unsplash.com/photo-1587080266227-677cc2a4e76e?w=800&h=600&fit=crop"
+      ],
+      "sunlight_hours": 9.0,
+      "rainfall": 0,
+      "avg_temperature": 22,
+      "humidity": 62,
+      "farm_activities": "施肥：采用沟施法施用有机复合肥（N-P-K=15-10-15），施肥量30kg/亩",
+      "phenological_observation": "茶树生长旺盛，叶色深绿，新梢生长速度加快",
+      "is_abnormal": false,
+      "abnormal_description": null,
+      "abnormal_solution": null
+    },
+    {
+      "date": "2024-09-20",
+      "plot_name": "C区西坡",
+      "recorder": "王师傅",
+      "weather": "小雨",
+      "temperature_range": "16~21°C",
+      "summary": "今日进行秋季修剪，去除病弱枝和过密枝，改善茶园通风透光条件。",
+      "full_description": "秋季是茶树修剪的重要时期。今日对C区西坡进行修剪作业，主要去除病弱枝、枯死枝和过密枝，同时对树冠进行适当整形，使茶树保持良好的树形结构。修剪高度控制在离地面55cm左右，修剪面尽量平整。本次修剪旨在改善茶园通风透光条件，减少病虫害发生，促进新梢萌发，提高来年春茶产量和品质。修剪后的枝条已集中清理出园，防止病虫害滋生。预计20天后茶树将萌发新梢。",
+      "images": [
+        "https://images.unsplash.com/photo-1563729822098-c7f7aa88c4d6?w=800&h=600&fit=crop"
+      ],
+      "sunlight_hours": 3.5,
+      "rainfall": 15.5,
+      "avg_temperature": 18,
+      "humidity": 85,
+      "farm_activities": "修剪：去除病弱枝、枯死枝和过密枝，修剪高度约55cm，修剪面平整",
+      "phenological_observation": "修剪前茶树生长密集，部分枝条交叉重叠，修剪后通风透光条件明显改善",
+      "is_abnormal": false,
+      "abnormal_description": null,
+      "abnormal_solution": null
+    },
+    {
+      "date": "2024-09-25",
+      "plot_name": "A区东坡",
+      "recorder": "张师傅",
+      "weather": "晴",
+      "temperature_range": "18~24°C",
+      "summary": "今日进行秋茶采摘，采摘标准为一芽二叶，鲜叶品质优良。",
+      "full_description": "经过前期的精心管理，A区东坡的茶树已达到采摘标准。今日组织采茶工进行秋茶采摘，采摘标准为一芽二叶初展，要求芽叶完整、新鲜、匀净，不采雨水叶、病虫叶。采摘时间为上午8:00-11:00，气温适宜，茶叶水分含量适中，有利于后续加工。本次采摘面积约5亩，鲜叶产量约150kg，鲜叶品质优良，色泽嫩绿，芽叶肥壮，符合优质秋茶标准。鲜叶已及时送往加工厂进行萎凋、杀青等工序。",
+      "images": [
+        "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=800&h=600&fit=crop"
+      ],
+      "sunlight_hours": 8.0,
+      "rainfall": 0,
+      "avg_temperature": 21,
+      "humidity": 68,
+      "farm_activities": "采摘：采摘标准为一芽二叶初展，采摘面积5亩，鲜叶产量150kg",
+      "phenological_observation": "茶树新梢生长整齐，一芽二叶占比达到70%以上，适宜采摘",
+      "is_abnormal": false,
+      "abnormal_description": null,
+      "abnormal_solution": null
+    }
+  ],
+  "monthly_summary": null
+}
+

@@ -1,0 +1,91 @@
+{
+  "plot": {
+    "name": "台地三号",
+    "carousel_images": [
+      "https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=800&q=80",
+      "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=800&q=80",
+      "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80"
+    ],
+    "info_list": [
+      {
+        "label": "地块名",
+        "value": "台地三号",
+        "icon": "tag"
+      },
+      {
+        "label": "位置",
+        "value": "云南省临沧市凤庆县小湾镇",
+        "icon": "location",
+        "sub_text": "- 北纬30度 \"黄金产茶带\""
+      },
+      {
+        "label": "主栽品种",
+        "value": "本地群体种",
+        "icon": "leaf"
+      },
+      {
+        "label": "面积",
+        "value": "1亩",
+        "icon": "expand"
+      },
+      {
+        "label": "海拔",
+        "value": "850米",
+        "icon": "mountain"
+      },
+      {
+        "label": "土壤质地",
+        "value": "砂质壤土",
+        "icon": "layers"
+      },
+      {
+        "label": "年均日照",
+        "value": "1800小时",
+        "icon": "sun"
+      },
+      {
+        "label": "年均降水",
+        "value": "1500毫米",
+        "icon": "droplet"
+      },
+      {
+        "label": "管理者",
+        "value": "王师傅",
+        "icon": "user",
+        "sub_text": "- 三代茶人"
+      }
+    ],
+    "value_summary": "得天独厚的砂质壤土与高山气候，孕育出鲜爽甘醇、独具兰花香的至臻好茶。"
+  },
+  "categories": [
+    {
+      "name": "明前茶",
+      "image_url": "https://images.unsplash.com/photo-1575487426366-079595af2247?w=400&q=80",
+      "description": "清明节前采摘，嫩芽初绽，香气清雅，回甘悠长",
+      "percentage": 9,
+      "harvest_period": "3.20 - 4.04"
+    },
+    {
+      "name": "雨前茶",
+      "image_url": "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=400&q=80",
+      "description": "谷雨前采摘，滋味醇厚，回甘持久，香气馥郁",
+      "percentage": 16,
+      "harvest_period": "4.05 - 4.19"
+    },
+    {
+      "name": "春茶",
+      "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&q=80",
+      "description": "春季采摘，鲜爽甘醇，营养丰富，叶底嫩绿",
+      "percentage": 24,
+      "harvest_period": "2.20 - 5.20"
+    },
+    {
+      "name": "夏茶",
+      "image_url": "https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=400&q=80",
+      "description": "夏季采摘，浓郁饱满，耐冲泡，滋味浓烈",
+      "percentage": 51,
+      "harvest_period": "5.21 - 8.31"
+    }
+  ],
+  "cta_bg": "https://images.unsplash.com/photo-1587334207976-c83b8c6a8e4e?w=1200&q=80"
+}

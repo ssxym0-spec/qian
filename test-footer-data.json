@@ -1,0 +1,25 @@
+{
+  "footer": {
+    "logoUrl": "/uploads/logo.png",
+    "gardenName": "云溯源茶园",
+    "copyrightText": "© 2025 云溯源茶园. 保留所有权利.",
+    "socialLinks": [
+      {
+        "platform": "weibo",
+        "url": "https://weibo.com/teatrace"
+      },
+      {
+        "platform": "xiaohongshu",
+        "url": "https://www.xiaohongshu.com/user/profile/teatrace"
+      },
+      {
+        "platform": "douyin",
+        "url": "https://www.douyin.com/user/teatrace"
+      },
+      {
+        "platform": "wechat",
+        "url": "/images/wechat-qrcode.jpg"
+      }
+    ]
+  }
+}

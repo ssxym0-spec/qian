@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+}
+
+/* 全局字体设置 */
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+/* 主标题使用思源宋体 */
+h1, h2,
+.font-serif {
+  font-family: 'Noto Serif SC', serif;
+}
+
+/* 副标题使用思源黑体 */
+h3, h4, h5, h6,
+.font-sans-title {
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* 确保底部导航栏始终可见 */
+.pb-safe-bottom {
+  padding-bottom: calc(env(safe-area-inset-bottom) + 4rem);
+}
+
+/* 自定义滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* 淡入动画（用于卡片流） - 只改变透明度，避免 transform 冲突 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* 🎪 跑马灯灯珠动画 - 五彩发光灯珠从左到右滚动 */
+@keyframes marquee-light {
+  0% {
+    transform: translateX(-100%);
+    background: radial-gradient(circle, #ef4444 0%, rgba(239, 68, 68, 0.4) 40%, transparent 70%);
+    box-shadow: 0 0 8px #ef4444, 0 0 16px #ef444480;
+  }
+  16.67% {
+    background: radial-gradient(circle, #f97316 0%, rgba(249, 115, 22, 0.4) 40%, transparent 70%);
+    box-shadow: 0 0 8px #f97316, 0 0 16px #f9731680;
+  }
+  33.33% {
+    background: radial-gradient(circle, #eab308 0%, rgba(234, 179, 8, 0.4) 40%, transparent 70%);
+    box-shadow: 0 0 8px #eab308, 0 0 16px #eab30880;
+  }
+  50% {
+    background: radial-gradient(circle, #22c55e 0%, rgba(34, 197, 94, 0.4) 40%, transparent 70%);
+    box-shadow: 0 0 8px #22c55e, 0 0 16px #22c55e80;
+  }
+  66.67% {
+    background: radial-gradient(circle, #3b82f6 0%, rgba(59, 130, 246, 0.4) 40%, transparent 70%);
+    box-shadow: 0 0 8px #3b82f6, 0 0 16px #3b82f680;
+  }
+  83.33% {
+    background: radial-gradient(circle, #8b5cf6 0%, rgba(139, 92, 246, 0.4) 40%, transparent 70%);
+    box-shadow: 0 0 8px #8b5cf6, 0 0 16px #8b5cf680;
+  }
+  100% {
+    transform: translateX(calc(100vw + 100%));
+    background: radial-gradient(circle, #ec4899 0%, rgba(236, 72, 153, 0.4) 40%, transparent 70%);
+    box-shadow: 0 0 8px #ec4899, 0 0 16px #ec489980;
+  }
+}
+
+.animate-marquee-light {
+  animation: marquee-light 6s linear infinite;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+
+/* ✨ 脉动实线边框效果（呼吸动画） */
+@keyframes gentle-pulse {
+  0%, 100% {
+    border-color: rgba(249, 115, 22, 0.5);
+    box-shadow: 0 0 0 rgba(249, 115, 22, 0);
+  }
+  50% {
+    border-color: rgba(249, 115, 22, 1);
+    box-shadow: 0 0 12px rgba(249, 115, 22, 0.4);
+  }
+}
+
+/* 激活状态的卡片容器 */
+.active-card-wrapper {
+  position: relative;
+  border-radius: inherit;
+}
+
+/* 透明默认边框 - 确保边框占位，避免激活时布局抖动 */
+.active-card-border-default {
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+/* 脉动边框效果 - 静态橙色边框 + 柔和呼吸动画 */
+.active-card-border {
+  position: relative;
+  border: 2px solid rgba(249, 115, 22, 0.5);
+  animation: gentle-pulse 4s ease-in-out infinite;
+  /* 禁用过渡效果，避免与动画冲突 */
+  transition: none !important;
+}
+
+/* 禁用激活卡片内图片/视频的 transform 过渡，避免页面加载时的意外缩放动画 */
+.active-card-border img,
+.active-card-border video {
+  transition: none !important;
+}
+
+/* 🔧 禁用卡片封面的放大效果
+ * 完全禁用图片/视频的 scale 变换，避免加载时的意外动画，也移除 hover 放大效果
+ */
+.group img,
+.group video {
+  transform: none !important;
+  transition: none !important;
+}
+
+/* 不使用伪元素 */
+.active-card-border::before {
+  display: none;
+}
+
+/* 确保卡片内容在边框之上 */
+.active-card-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* 🎯 箭头呼吸动画 - 引导用户点击 */
+@keyframes arrow-breathe {
+  0%, 100% {
+    opacity: 0.6;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(4px);
+  }
+}
+
+.arrow-breathe {
+  animation: arrow-breathe 2s ease-in-out infinite;
+  /* 禁用过渡效果，避免与动画冲突 */
+  transition: none !important;
+}
+
+/* 🏅 徽章呼吸动画 - 突出等级标识 */
+@keyframes badge-breathe {
+  0%, 100% {
+    transform: rotate(12deg) scale(1);
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+  }
+  50% {
+    transform: rotate(12deg) scale(1.08);
+    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.2));
+  }
+}
+
+.badge-breathe {
+  animation: badge-breathe 5s ease-in-out infinite;
+}

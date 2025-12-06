@@ -1,0 +1,112 @@
+{
+  "daily_logs": [
+    {
+      "date": "2024-08-05",
+      "plot_name": "A区东坡",
+      "recorder": "张师傅",
+      "weather": "晴",
+      "temperature_range": "22~30°C",
+      "summary": "高温天气持续，加强了灌溉管理，确保茶树不受高温影响。",
+      "full_description": "八月初正值盛夏高温期，今日最高气温达到30°C。为应对高温天气，加强了灌溉管理，早晚各浇水一次，确保土壤湿润。观察茶树长势良好，未见明显高温胁迫症状。",
+      "images": [
+        "https://images.unsplash.com/photo-1563788835932-4a8ec6c615c1?w=800&h=600&fit=crop"
+      ],
+      "sunlight_hours": 10.5,
+      "rainfall": 0,
+      "avg_temperature": 26,
+      "humidity": 60,
+      "farm_activities": "灌溉：早晚各一次，灌溉量约600L/亩",
+      "phenological_observation": "茶树生长旺盛，新梢萌发快速",
+      "is_abnormal": false,
+      "abnormal_description": null,
+      "abnormal_solution": null
+    },
+    {
+      "date": "2024-08-15",
+      "plot_name": "B区南坡",
+      "recorder": "李师傅",
+      "weather": "雷阵雨",
+      "temperature_range": "24~28°C",
+      "summary": "雷阵雨带来充沛降水，缓解了高温干旱，茶树生长状况改善。",
+      "full_description": "下午突降雷阵雨，降水量达到45mm，有效缓解了前期的高温干旱。雨后巡查茶园，发现茶树叶片舒展，生长状况明显改善。同时检查了排水系统，确保无积水现象。",
+      "images": [
+        "https://images.unsplash.com/photo-1582793988951-9aed5509eb97?w=800&h=600&fit=crop"
+      ],
+      "sunlight_hours": 4.5,
+      "rainfall": 45.0,
+      "avg_temperature": 26,
+      "humidity": 88,
+      "farm_activities": null,
+      "phenological_observation": "雨后茶树恢复生机，新梢萌发加速",
+      "is_abnormal": false,
+      "abnormal_description": null,
+      "abnormal_solution": null
+    },
+    {
+      "date": "2024-08-25",
+      "plot_name": "A区东坡",
+      "recorder": "张师傅",
+      "weather": "晴",
+      "temperature_range": "23~29°C",
+      "summary": "进行夏末最后一轮采摘，为秋茶生产做好准备。",
+      "full_description": "今日进行夏末最后一轮采摘，采摘标准为一芽二三叶。本次采摘主要是为了调整茶树生长节奏，为即将到来的秋茶生产做好准备。采摘面积8亩，鲜叶产量约200kg。",
+      "images": [
+        "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=800&h=600&fit=crop"
+      ],
+      "sunlight_hours": 9.0,
+      "rainfall": 0,
+      "avg_temperature": 26,
+      "humidity": 65,
+      "farm_activities": "采摘：采摘面积8亩，鲜叶产量200kg",
+      "phenological_observation": "茶树新梢生长旺盛，一芽二三叶占比80%",
+      "is_abnormal": false,
+      "abnormal_description": null,
+      "abnormal_solution": null
+    }
+  ],
+  "monthly_summary": {
+    "month": "2024-08",
+    "video_url": "https://example.com/videos/2024-08-summary.mp4",
+    "video_thumbnail": "https://images.unsplash.com/photo-1587080266227-677cc2a4e76e?w=800&h=600&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1563788835932-4a8ec6c615c1?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1582793988951-9aed5509eb97?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=800&h=600&fit=crop"
+    ],
+    "harvest_count": 3,
+    "total_harvest_weight": 450,
+    "farm_calendar": [
+      {
+        "date": "08-05",
+        "activity": "高温灌溉管理"
+      },
+      {
+        "date": "08-10",
+        "activity": "病虫害巡查"
+      },
+      {
+        "date": "08-15",
+        "activity": "雨后排水检查"
+      },
+      {
+        "date": "08-20",
+        "activity": "叶面施肥"
+      },
+      {
+        "date": "08-25",
+        "activity": "夏末采摘"
+      }
+    ],
+    "abnormal_records": [
+      {
+        "date": "08-12",
+        "description": "C区西坡发现小绿叶蝉虫害，虫口密度较高",
+        "solution": "使用生物农药进行防治，连续喷施3次，间隔7天"
+      }
+    ],
+    "avg_temperature": 26.5,
+    "total_rainfall": 125.5,
+    "next_month_plan": "九月进入秋茶生产关键期，计划重点工作如下：1. 加强茶园水肥管理，适时追施有机肥，促进秋梢生长；2. 做好病虫害预防工作，特别是茶饼病、茶尺蠖等秋季高发病虫害；3. 根据天气情况合理安排秋茶采摘，确保鲜叶品质；4. 进行秋季修剪，为明年春茶生产打好基础；5. 开展茶园土壤改良，增施有机肥，提高土壤肥力。"
+  }
+}
+

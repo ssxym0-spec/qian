@@ -1,0 +1,11 @@
+clear-day.svg 晴天
+overcast.svg 多云
+extreme.svg 阴天
+partly-cloudy-day.svg 多云转晴
+overcast-rain.svg 小雨
+drizzle.svg 中雨
+rain.svg 大雨
+overcast-day-rain.svg 白天有阵雨
+thunderstorms-extreme-rain.svg 雷阵雨
+wind.svg 风
+sun-hot.svg 热浪

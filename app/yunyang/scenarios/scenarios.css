@@ -1,0 +1,524 @@
+/* ===== 页面头部样式 ===== */
+.page-header {
+  text-align: center;
+  padding: 60px 20px 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.page-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0 0 12px 0;
+}
+
+.page-subtitle {
+  font-size: 18px;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* ===== 场景容器样式 ===== */
+.scenarios-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* ===== 场景网格布局 ===== */
+.scenarios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
+}
+
+/* ===== 场景卡片样式 ===== */
+.scenario-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.scenario-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* 私人定制主题色 */
+.scenario-card-private {
+  border-top: 4px solid #3498db;
+}
+
+.scenario-card-private:hover {
+  border-top-color: #2980b9;
+}
+
+/* 企业领养主题色 */
+.scenario-card-enterprise {
+  border-top: 4px solid #9b59b6;
+}
+
+.scenario-card-enterprise:hover {
+  border-top-color: #8e44ad;
+}
+
+/* ===== 卡片内部结构 ===== */
+.scenario-card-inner {
+  position: relative;
+  min-height: 400px;
+}
+
+/* 背景图片 */
+.scenario-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+}
+
+/* 内容区域 */
+.scenario-content {
+  position: relative;
+  padding: 24px;
+  z-index: 1;
+}
+
+/* ===== 场景头部 ===== */
+.scenario-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.scenario-icon {
+  font-size: 48px;
+  line-height: 1;
+}
+
+.scenario-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 0;
+}
+
+/* ===== 痛点和方案样式 ===== */
+.scenario-pain-point,
+.scenario-solution {
+  margin-bottom: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.scenario-pain-point {
+  border-left: 4px solid #f39c12;
+  background: #fff3cd;
+}
+
+.scenario-solution {
+  border-left: 4px solid #3498db;
+  background: #d1ecf1;
+}
+
+.scenario-pain-point .label,
+.scenario-solution .label {
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #2c3e50;
+}
+
+.scenario-pain-point p,
+.scenario-solution p {
+  margin: 0;
+  line-height: 1.6;
+  color: #34495e;
+}
+
+/* ===== 核心价值样式 ===== */
+.scenario-values {
+  margin-bottom: 20px;
+}
+
+.scenario-values .label {
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #2c3e50;
+}
+
+.values-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.value-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #e8f5e9;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #27ae60;
+  white-space: nowrap;
+}
+
+.value-icon {
+  font-size: 16px;
+}
+
+.value-title {
+  font-weight: 500;
+}
+
+/* ===== 查看详情按钮 ===== */
+.btn-view-detail {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-view-detail:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* ===== 详情弹窗样式 ===== */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  background: white;
+  border-radius: 16px;
+  overflow-y: auto;
+  z-index: 1;
+  animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2c3e50;
+}
+
+.modal-close:hover {
+  background: rgba(0, 0, 0, 0.2);
+  transform: rotate(90deg);
+}
+
+/* ===== 详情内容样式 ===== */
+.scenario-detail {
+  padding: 40px;
+}
+
+.detail-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.detail-icon {
+  font-size: 72px;
+  margin-bottom: 16px;
+}
+
+.detail-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 0;
+}
+
+/* 详情图片 */
+.detail-image {
+  margin-bottom: 32px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.detail-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 详情区块 */
+.detail-section {
+  margin-bottom: 32px;
+}
+
+.detail-section h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #2c3e50;
+}
+
+.pain-point-box {
+  padding: 20px;
+  background: #fff3cd;
+  border-left: 4px solid #f39c12;
+  border-radius: 8px;
+  line-height: 1.8;
+  color: #856404;
+}
+
+.solution-box {
+  padding: 20px;
+  background: #d1ecf1;
+  border-left: 4px solid #3498db;
+  border-radius: 8px;
+  line-height: 1.8;
+  color: #0c5460;
+}
+
+/* 核心价值详情 */
+.values-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.value-detail-card {
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.value-detail-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.value-detail-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.value-detail-content h4 {
+  font-size: 18px;
+  color: #2c3e50;
+  margin: 0 0 8px 0;
+}
+
+.value-detail-content p {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* 行动按钮 */
+.detail-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.btn-action {
+  flex: 1;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+  background: #ecf0f1;
+  color: #2c3e50;
+}
+
+.btn-secondary:hover {
+  background: #bdc3c7;
+}
+
+/* ===== 加载和错误状态 ===== */
+.loading,
+.error-message {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 18px;
+  color: #7f8c8d;
+  grid-column: 1 / -1;
+}
+
+.error-message {
+  color: #e74c3c;
+}
+
+/* ===== 空状态 ===== */
+.empty-state {
+  text-align: center;
+  padding: 80px 20px;
+  grid-column: 1 / -1;
+}
+
+.empty-state-icon {
+  font-size: 72px;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.empty-state-text {
+  font-size: 18px;
+  color: #7f8c8d;
+}
+
+/* ===== 响应式设计 ===== */
+@media (min-width: 1200px) {
+  .scenarios-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .scenarios-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .page-header {
+    padding: 40px 20px 30px;
+  }
+
+  .page-title {
+    font-size: 28px;
+  }
+
+  .page-subtitle {
+    font-size: 16px;
+  }
+
+  .scenarios-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .scenario-card-inner {
+    min-height: auto;
+  }
+
+  .scenario-icon {
+    font-size: 36px;
+  }
+
+  .scenario-title {
+    font-size: 20px;
+  }
+
+  .modal-content {
+    width: 95%;
+    max-height: 95vh;
+  }
+
+  .scenario-detail {
+    padding: 24px;
+  }
+
+  .detail-icon {
+    font-size: 56px;
+  }
+
+  .detail-title {
+    font-size: 24px;
+  }
+
+  .values-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-actions {
+    flex-direction: column;
+  }
+}
+
