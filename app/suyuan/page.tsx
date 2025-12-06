@@ -12,6 +12,10 @@ import SuyuanIndexRedirect from './components/SuyuanIndexRedirect';
  * URL 格式: /suyuan?index=0
  * - index: 品类在首页列表中的顺序编号（从0开始）
  */
+
+// 强制动态渲染，避免预渲染时的 Suspense 问题
+export const dynamic = 'force-dynamic';
+
 export default function SuyuanIndexPage() {
   return (
     <Suspense
