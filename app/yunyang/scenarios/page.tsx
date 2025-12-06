@@ -1,10 +1,8 @@
-'use client';
-
-import React, { Suspense } from 'react';
+import { Suspense } from 'react';
 import ScenariosPageContent from './components/ScenariosPageContent';
 import './scenarios.css';
 
-const ScenariosPage: React.FC = () => {
+export default function ScenariosPage() {
   return (
     <Suspense
       fallback={
@@ -18,7 +16,5 @@ const ScenariosPage: React.FC = () => {
       <ScenariosPageContent />
     </Suspense>
   );
-};
-
-export default ScenariosPage;
+}
 
