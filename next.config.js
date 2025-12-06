@@ -11,6 +11,15 @@ const nextConfig = {
   reactStrictMode: true,
   // 生产环境优化
   productionBrowserSourceMaps: false,
+  // API 代理配置 - 解决 CORS 跨域问题
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'https://hou.goodcat.ggff.net/api/:path*',
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {
@@ -28,6 +37,10 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'hou.goodcat.ggff.net', // 后端服务器域名
       },
       {
         protocol: 'https',
