@@ -22,7 +22,7 @@ async function getBatchDetail(batchId: string): Promise<BatchDetail | null> {
   try {
     console.log('🔍 [Server] 开始获取批次详情, batchId:', batchId);
     
-    const apiUrl = `http://localhost:3000/api/public/batches/${batchId}`;
+    const apiUrl = `${process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000'}/api/public/batches/${batchId}`;
     console.log('🔍 [Server] API URL:', apiUrl);
     
     const response = await fetch(apiUrl, {

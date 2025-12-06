@@ -110,7 +110,7 @@ export default async function YunYangPage() {
   let b2bPlan: B2BPlanData | null = null;
   
   try {
-    const response = await fetch('http://localhost:3000/api/public/adoption-plans', {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000'}/api/public/adoption-plans`, {
       cache: 'no-store', // 不缓存，每次都获取最新数据
     });
     
@@ -142,7 +142,7 @@ export default async function YunYangPage() {
     // 提供更详细的错误信息
     if (errorMessage.includes('401') || errorMessage.includes('认证')) {
       console.warn('⚠️ 提示: /api/public/adoption-plans 是公开接口，不应需要认证');
-      console.warn('⚠️ 请检查后端服务是否正常运行在 http://localhost:3000');
+      console.warn(`⚠️ 请检查后端服务是否正常运行在 ${process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000'}`);
     }
     
     // 如果API调用失败，组件将使用降级方案显示默认内容

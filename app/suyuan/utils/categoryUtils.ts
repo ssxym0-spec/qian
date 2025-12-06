@@ -25,7 +25,7 @@ export async function getAvailableCategories(): Promise<Category[]> {
   try {
     console.log('📋 [CategoryUtils] 正在获取品类列表...');
     
-    const response = await fetch('http://localhost:3000/api/public/categories', {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000'}/api/public/categories`, {
       cache: 'no-store', // 总是获取最新数据
     });
     
@@ -38,7 +38,7 @@ export async function getAvailableCategories(): Promise<Category[]> {
       // 401 错误时提供更详细的提示
       if (response.status === 401) {
         console.warn('⚠️ [CategoryUtils] 提示: /api/public/categories 是公开接口，不应需要认证');
-        console.warn('⚠️ [CategoryUtils] 请检查后端服务是否正常运行在 http://localhost:3000');
+        console.warn(`⚠️ [CategoryUtils] 请检查后端服务是否正常运行在 ${process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000'}`);
       }
       
       return [];
@@ -64,7 +64,7 @@ export async function getAvailableCategories(): Promise<Category[]> {
     
     // 网络错误提示
     if (errorMessage.includes('fetch') || errorMessage.includes('network')) {
-      console.warn('⚠️ [CategoryUtils] 网络错误: 请确保后端服务运行在 http://localhost:3000');
+      console.warn(`⚠️ [CategoryUtils] 网络错误: 请确保后端服务运行在 ${process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000'}`);
     }
     
     return [];

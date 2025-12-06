@@ -5,10 +5,10 @@
 /**
  * 将相对路径转换为完整的图片 URL
  * @param url - 图片 URL（可能是相对路径或完整 URL）
- * @param baseUrl - 后端服务器地址，默认为 http://localhost:3000
+ * @param baseUrl - 后端服务器地址，默认为环境变量或 http://localhost:3000
  * @returns 完整的图片 URL
  */
-export function getFullImageUrl(url: string | undefined, baseUrl: string = 'http://localhost:3000'): string {
+export function getFullImageUrl(url: string | undefined, baseUrl: string = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000'): string {
   if (!url) return '';
   
   // 如果已经是完整 URL，直接返回

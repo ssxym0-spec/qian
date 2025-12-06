@@ -108,6 +108,8 @@
 
     <script>
         // 🎯 现在 slug 由后端直接提供，无需前端映射
+        // API 基础 URL - 从环境变量或使用默认值
+        const API_BASE_URL = window.API_BASE_URL || 'http://localhost:3000';
 
         async function diagnose() {
             const resultsDiv = document.getElementById('results');
@@ -115,12 +117,12 @@
             
             try {
                 // 获取首页品类列表
-                const landingResponse = await fetch('http://localhost:3000/api/public/landing-page');
+                const landingResponse = await fetch(`${API_BASE_URL}/api/public/landing-page`);
                 const landingData = await landingResponse.json();
                 const landingCategories = landingData.categories || [];
                 
                 // 获取溯源页品类列表（包含slug）
-                const categoriesResponse = await fetch('http://localhost:3000/api/public/categories');
+                const categoriesResponse = await fetch(`${API_BASE_URL}/api/public/categories`);
                 const categoriesData = await categoriesResponse.json();
                 
                 // 创建品类名称到slug的映射
@@ -234,7 +236,7 @@
                         continue;
                     }
                     
-                    const url = `http://localhost:3000/suyuan/${slug}`;
+                    const url = `${API_BASE_URL}/suyuan/${slug}`;
                     
                     try {
                         const response = await fetch(url);

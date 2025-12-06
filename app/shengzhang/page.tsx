@@ -34,7 +34,7 @@ export default async function ShengzhangPage({
 
   try {
     const response = await fetch(
-      `http://localhost:3000/api/public/growth-data?month=${currentMonth}`,
+      `${process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000'}/api/public/growth-data?month=${currentMonth}`,
       {
         cache: 'no-store', // 不缓存，确保数据实时性
       }
@@ -57,7 +57,7 @@ export default async function ShengzhangPage({
     // 提供更详细的错误信息
     if (error.includes('401') || error.includes('认证')) {
       console.warn('⚠️ 提示: /api/public/growth-data 是公开接口，不应需要认证');
-      console.warn('⚠️ 请检查后端服务是否正常运行在 http://localhost:3000');
+      console.warn(`⚠️ 请检查后端服务是否正常运行在 ${process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000'}`);
     }
   }
 
@@ -67,7 +67,7 @@ export default async function ShengzhangPage({
         <div className="container mx-auto px-4 py-20 text-center">
           <h2 className="text-2xl font-bold text-red-600 mb-4">数据加载失败</h2>
           <p className="text-gray-600">{error}</p>
-          <p className="text-gray-500 mt-2">请确保后端服务运行在 http://localhost:3000</p>
+          <p className="text-gray-500 mt-2">请确保后端服务运行在 {process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000'}</p>
         </div>
       ) : data ? (
         <GrowthPageClientWrapper 

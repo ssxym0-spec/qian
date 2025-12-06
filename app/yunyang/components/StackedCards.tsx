@@ -35,7 +35,7 @@ export default function StackedCards({ cards }: StackedCardsProps) {
       return trimmed;
     }
     if (trimmed.startsWith('/')) {
-      return `http://localhost:3000${trimmed}`;
+      return `${process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000'}${trimmed}`;
     }
     return trimmed;
   };

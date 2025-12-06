@@ -15,8 +15,8 @@ interface PageProps {
   };
 }
 
-const BATCH_API_BASE = 'http://localhost:3000/api/public/batches';
-const CATEGORY_BATCH_API_BASE = 'http://localhost:3000/api/public/categories';
+const BATCH_API_BASE = `${process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000'}/api/public/batches`;
+const CATEGORY_BATCH_API_BASE = `${process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000'}/api/public/categories`;
 
 /**
  * 在对象中按 key 关键词递归查找第一个看起来像 URL 的字符串
