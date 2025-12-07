@@ -1,4 +1,31 @@
 /** @type {import('next').NextConfig} */
+// 从环境变量获取后端 API 服务器地址
+const getApiServerUrl = () => {
+  // 优先使用环境变量
+  if (process.env.NEXT_PUBLIC_API_SERVER_URL) {
+    return process.env.NEXT_PUBLIC_API_SERVER_URL;
+  }
+  // 开发环境默认值
+  if (process.env.NODE_ENV === 'development') {
+    return 'http://localhost:3000';
+  }
+  // 生产环境后备值（如果未设置环境变量）
+  return 'https://hou.goodcat.ggff.net';
+};
+
+// 从 URL 中提取 hostname
+const getApiHostname = (url) => {
+  try {
+    const urlObj = new URL(url);
+    return urlObj.hostname;
+  } catch {
+    return null;
+  }
+};
+
+const apiServerUrl = getApiServerUrl();
+const apiHostname = getApiHostname(apiServerUrl);
+
 const nextConfig = {
   // 防止 ChunkLoadError 的配置
   onDemandEntries: {
@@ -16,7 +43,7 @@ const nextConfig = {
     return [
       {
         source: '/api/:path*',
-        destination: 'https://hou.goodcat.ggff.net/api/:path*',
+        destination: `${apiServerUrl}/api/:path*`,
       },
     ];
   },
@@ -38,10 +65,11 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'images.unsplash.com',
       },
-      {
-        protocol: 'https',
-        hostname: 'hou.goodcat.ggff.net', // 后端服务器域名
-      },
+      // 动态添加后端服务器域名（如果 hostname 存在）
+      ...(apiHostname ? [{
+        protocol: apiServerUrl.startsWith('https') ? 'https' : 'http',
+        hostname: apiHostname,
+      }] : []),
       {
         protocol: 'https',
         hostname: '**', // 允许所有 HTTPS 域名（开发环境）
