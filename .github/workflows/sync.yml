@@ -13,6 +13,5 @@ jobs:
       env:
         SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
       with:
-        # 下面这两行必须改成真实的仓库地址：
         source-repo: git@github.com:ssxym0-spec/qian.git
         destination-repo: git@gitee.com:ssxym0/qian.git
